@@ -19,6 +19,8 @@ site: data errors, community confirmations and ideas.
 The easiest way is the **Report a problem** or **Confirm** link on the page itself: it opens the
 right form with the page already filled in.
 
+No GitHub account? Email **hello@circuitbase.tech** with the page address and what you found.
+
 ## How confirmations work
 
 A confirmation is a report from someone who checked a page against real hardware. It is an extra

@@ -12,7 +12,7 @@ body:
     id: page
     attributes:
       label: Page URL
-      placeholder: https://circuitbase.tech/schematic/ne555-astable
+      placeholder: https://circuitbase.tech/schematic/ne555-astable-square-wave-generator
     validations:
       required: true
   - type: dropdown

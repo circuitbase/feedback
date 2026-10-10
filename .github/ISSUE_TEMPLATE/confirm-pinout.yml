@@ -1,0 +1,67 @@
+name: Confirm a pinout
+description: You checked a board or connector pinout against real hardware.
+title: "[Confirm pinout] "
+labels: ["type:confirmation", "entity:pinout"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A confirmation says that this page matches the hardware you checked. Accepted confirmations are counted on the page.
+        Issues are public: please do not post personal data.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://circuitbase.tech/pinout/arduino-uno-r3
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Vendor and revision you checked
+      description: As printed on the board or package, or where you bought it.
+      placeholder: Official Arduino Uno R3 / clone with CH340, rev 2021
+    validations:
+      required: true
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: What did you check?
+      options:
+        - label: Pin or contact positions and numbering
+        - label: Pin functions (GPIO, power, ground, buses)
+        - label: Voltage levels or limits
+        - label: Connector orientation and keying
+  - type: textarea
+    id: method
+    attributes:
+      label: How did you check it?
+      description: For example a multimeter continuity test, a working project, or comparing the board silkscreen.
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Matches the page
+        - Found a difference
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Difference or notes
+      description: Required if you found a difference. Which pin, what you measured.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Photo or measurement (optional)
+      description: Drag an image here or paste a link.
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licence
+      options:
+        - label: I agree that what I submit is published under CC BY 4.0.
+          required: true

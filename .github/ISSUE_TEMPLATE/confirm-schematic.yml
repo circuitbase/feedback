@@ -1,0 +1,60 @@
+name: Confirm a schematic
+description: You built, simulated or reviewed a CircuitBase schematic.
+title: "[Confirm schematic] "
+labels: ["type:confirmation", "entity:schematic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A confirmation says how you checked this schematic and what you found. Accepted confirmations are counted on the page.
+        Issues are public: please do not post personal data.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://circuitbase.tech/schematic/ne555-astable
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: How did you check it?
+      options:
+        - Built it and it works
+        - Simulated it
+        - Reviewed it against datasheets
+    validations:
+      required: true
+  - type: textarea
+    id: build
+    attributes:
+      label: Parts and setup
+      description: Part substitutions, supply voltage, board or breadboard, simulator.
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Works as drawn
+        - Found a difference
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Difference or notes
+      description: Required if you found a difference. What you changed or measured.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Photo, scope capture or simulation (optional)
+      description: Drag an image here or paste a link.
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licence
+      options:
+        - label: I agree that what I submit is published under CC BY 4.0.
+          required: true

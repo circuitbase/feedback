@@ -1,0 +1,54 @@
+name: Data error
+description: A wrong pin, contact, voltage, orientation or fact on a board, connector or component page.
+title: "[Error] "
+labels: ["type:error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep CircuitBase correct. Issues are public: please do not post personal data.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: The CircuitBase page with the error.
+      placeholder: https://circuitbase.tech/pinout/raspberry-pi-pico
+    validations:
+      required: true
+  - type: dropdown
+    id: entity
+    attributes:
+      label: Page type
+      options:
+        - Board pinout
+        - Connector
+        - Component
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Pin, contact or field
+      description: Which pin, contact, table row or value is wrong.
+      placeholder: GP26 / pin 31, ADC column
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: What the page says and what it should say.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Datasheet link and page, a measurement, or a photo of the board markings.
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Board or part revision (if known)
+      placeholder: Rev 3, clone from vendor X, marking on the chip

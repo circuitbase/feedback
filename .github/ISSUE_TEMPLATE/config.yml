@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: CircuitBase website
+    url: https://circuitbase.tech
+    about: Browse pinouts, components and schematics, or open the schematic editor.

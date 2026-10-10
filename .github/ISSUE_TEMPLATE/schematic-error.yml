@@ -1,0 +1,37 @@
+name: Schematic error
+description: A wrong part, value, net or connection in a CircuitBase schematic.
+title: "[Schematic error] "
+labels: ["type:error", "entity:schematic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep CircuitBase correct. Issues are public: please do not post personal data.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://circuitbase.tech/schematic/ne555-astable
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Part, net or connection
+      placeholder: R2, net VOUT, pin 7 of U1
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: What the schematic shows and what it should show, and what happens if built as drawn.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Datasheet reference, calculation, simulation or a photo of your build.
+    validations:
+      required: true

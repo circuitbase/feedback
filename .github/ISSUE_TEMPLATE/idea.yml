@@ -1,0 +1,24 @@
+name: Idea
+description: Suggest a board, connector, component, schematic or feature.
+title: "[Idea] "
+labels: ["type:idea"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of idea?
+      options:
+        - A board or connector to add
+        - A component to add
+        - A schematic to add
+        - An editor feature
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What you need and why. Links to datasheets or examples help.
+    validations:
+      required: true
